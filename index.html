@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <title>Primary Calculator
+  </title>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="tire">
+        <!-- <a class="switchbtn" href="secondary.html"> Secondary Static  Port Calculator
+      </a> -->
+        <div class="refrence">
+          <span>
+            For Reference Only
+          </span>
+        </div>
+        <a href="secondary.html" class="switchbtn">
+          Click Here For <br />
+          Secondary Static Port <br />
+          Calculator
+        </a>
+
+        <h4>
+          Per GMM 2-2-201
+          <br />
+          You must be RVSM Skin Waviness <br />
+          Inspection Certified to return the <br />
+          aircraft to service. <br />
+          Course Code: M54RV00
+        </h4>
+        <div class="switcher">
+          <!-- <a href="index.html"> Primary Static Port Calculator</a> -->
+          <a>Primary Static Port Calculator</a>
+        </div>
+        <h2>
+          <span style="color: rgba(77, 20, 140, 1)">Tech</span><span style="color: rgba(255, 102, 0, 1)">Ops</span>
+          Training
+          <br />
+          <span style="color: rgba(77, 20, 140, 1)">
+            A300-600 RVSM Skin <br />
+            Waviness Insp. <br />
+          </span>
+        </h2>
+        <div class="btns-logo">
+          <button class="reset" id="resetbtn" name="button">
+            <img src="assets/images/reset.png" alt="" />
+          </button>
+          <a onclick="popup1()" id="infobtn" class="info-btn">
+            <img src="assets/images/question-mark.png" alt="" />
+          </a>
+          <span class="popuptext" id="myPopup">
+            <a href="https://training.techops.fedex.com/resources/video/A300/A300_How_To_Use_The_A300_Skin_Waviness_Calculator.mp4"
+              target="blank">
+              How To Use The A300-600 RVSM Skin Waviness Calculator
+            </a>
+            <a href="https://training.techops.fedex.com/resources/video.aspx?id=2678" target="blank">
+              A300 Skin Waviness Tool Installation
+            </a>
+            <a href="https://training.techops.fedex.com/resources/video.aspx?id=2679" target="blank">
+              A300 RVSM Measurements
+            </a>
+            <a id="popupopen">AMM 34-10-00-02 and the GMM 6-5-490</a>
+          </span>
+          <img class="logo" src="assets/images/FedEx.svg" alt="" />
+        </div>
+
+        <img id="engine-img" src="assets/images/PrimaryPortCentered2.png" alt="" />
+
+        <div class="inputs" id="p1">
+          <label for="">Position A :</label>
+          <input class="position_data" type="number" name="" id="inp1" />
+        </div>
+        <div class="inputs" id="p2">
+          <label for="">Position B :</label>
+          <input class="position_data" type="number" name="" id="inp2" />
+        </div>
+        <div class="inputs" id="p3">
+          <label for="">Position U :</label>
+          <input class="position_data" type="number" name="" id="inp3" />
+        </div>
+        <div class="inputs" id="p4">
+          <label for="">Position V :</label>
+          <input class="position_data" type="number" name="" id="inp4" />
+        </div>
+        <div class="inputs" id="p5">
+          <label for="">Position C :</label>
+          <input class="position_data" type="number" name="" id="inp5" />
+        </div>
+        <div class="inputs" id="p6">
+          <label for="">Position W :</label>
+          <input class="position_data" type="number" name="" id="inp6" />
+        </div>
+        <div class="inputs" id="p7">
+          <label for="">Position X :</label>
+          <input class="position_data" type="number" name="" id="inp7" />
+        </div>
+        <div class="inputs" id="p8">
+          <label for="">Position D :</label>
+          <input class="position_data" type="number" name="" id="inp8" />
+        </div>
+        <div class="inputs" id="p9">
+          <label for="">Position E :</label>
+          <input class="position_data" type="number" name="" id="inp9" />
+        </div>
+
+        <div class="lines" id="line1"></div>
+        <div class="lines" id="line2"></div>
+        <div class="lines" id="line3"></div>
+        <div class="lines" id="line4"></div>
+        <div class="lines" id="line5"></div>
+        <div class="lines" id="line6"></div>
+        <div class="lines" id="line7"></div>
+        <div class="lines" id="line8"></div>
+        <div class="lines" id="line9"></div>
+        <div class="seeFormula">
+          <span id="popupopen2">Click Here To See Formula</span>
+        </div>
+        <div class="output">
+          <div class="">
+            <span class="area">Area R1</span>
+            <h3 class="groups" id="groupA">Value 1: <span></span></h3>
+            <h3 class="groups" id="groupB">Value 2: <span></span></h3>
+            <span class="area">Area R2</span>
+            <h3 class="groups" id="groupC">Value 3: <span></span></h3>
+            <h3 class="groups" id="groupD">Value 4: <span></span></h3>
+            <!-- <h1 class="groups" id="groupE"><b> Group E:</b> <span></span> </h1>
+            <h1 class="groups" id="groupF"><b> Group F:</b> <span></span> </h1> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="popupbox" id="popup">
+    <div class="popup">
+
+
+      <img id="close" src="assets/images/close.png" alt="">
+      <div>
+        RVSM A300 Skin Waviness Calculator <br> NGPS, AMM 34-10-00-02 and the GMM 6-5-490
+      </div>
+    </div>
+  </div>
+  <div class="popupbox" id="popup2">
+    <div class="popup">
+      <span class="seeexample">Click Here To See Example</span>
+      <div class="example">
+        <img id="close3" src="assets/images/close.png" alt="">
+
+        <ul>
+
+
+          <li>
+            <p class="tagremove">
+              Reference: A300-600 SRM 53-10-12-101 (MEASUREMENT OF SKIN WAVINESS)
+              & AMM 34-10-00-06 (RVSM – INSPECTION/CHECK)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              TAKE MEASUREMENTS IN ORDER SPECIFIED ON LARGE RULE POINTS: A, B, U, V, C, W, X, D, AND E.
+              PERFORM CALCULATIONS IAW FORMULA(S) LISTED ON JOB AID. SEE LINK TO JOB AID BELOW.
+            </p>
+          </li>
+          <li>
+            <p>
+              EXAMPLE:
+            </p>
+          </li>
+          <li>
+            <p>
+              Value 1 = (B+C)/2 - (U+V)/2 = ______
+            </p>
+            <p>
+              Value 2 = (C+D)/2 - (W+X)/2 = ______
+            </p>
+          </li>
+          <li>
+            <p>
+              Value 3 = (A+X)/2 - (U+V)/2 = ______
+            </p>
+            <p>
+              Value 4 = (U+E)/2 - (W+X)/2 = ______
+            </p>
+          </li>
+          <li>
+
+            <p>
+             <strong>Note:</strong> Values 1 and 2 are for area R1 and each may not exceed +/-0.25mm (0.010 inch)
+            </p>
+           </li>
+           <li>
+            <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value 3 and 4 are for area R2 and each may not exceed +/-0.5mm (0.020 inch)
+            </p>
+           </li>
+          <li>
+            <p>
+              VERIFY CALCULATIONS ARE WITHIN TOLERANCE(S) BY USING THE STATIC PORT SKIN WAVINESS CALCULATOR APP FOUND ON THE TECH OPS TRAINING WEBSITE. 
+            </p>
+          </li>
+          <li>
+            <p>
+              LINK TO JOB AID : 
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="https://training.techops.fedex.com/resources/Airbus/Airbus_34_Formula_and_Tolerances_for_Waviness_Testing.pdf" target="_blank">Formula and Tolerances for Waviness Testing on A300-600 and A310-200/A310-300 Aircraft (fedex.com)</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <img id="close2" src="assets/images/close.png" alt="">
+      <div>
+        <ul class="formula-ul">
+
+          <li>
+            <p>
+              <!-- (Position B + Position C / 2) - (Position U + Positon V / 2)  -->
+              R1 Value 1 = \[\left[\frac{B + C}{2}\right] - \left[\frac{U + V}{2}\right] \] =
+            <p id="r1value1">
+
+            </p>
+            </p>
+
+          </li>
+          <li>
+            <p>
+              <!-- (Position C + Position D / 2) - (Position W + Positon X / 2)  -->
+              R1 Value 2 = \[\left[\frac{C + D}{2}\right] - \left[\frac{W + X}{2}\right] \] =
+            <p id="r1value2">
+
+            </p>
+            </p>
+
+          </li>
+          <li>
+            <p>
+              <!-- (Position A + Position X / 2) - (Position U + Positon V / 2)  -->
+              R2 Value 3 = \[\left[\frac{A + X}{2}\right] - \left[\frac{U + V}{2}\right] \] =
+            <p id="r2value1">
+
+            </p>
+            </p>
+
+          </li>
+          <li>
+            <p>
+              <!-- (Position U + Position E / 2) - (Position W + Positon X / 2)  -->
+              R2 Value 4 = \[\left[\frac{U + E}{2}\right] - \left[\frac{W + X}{2}\right] \] =
+            <p id="r2value2">
+
+            </p>
+            </p>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#popup").hide();
+      $("#popup2").hide();
+      $("#popupopen").click(function () {
+        $("#popup").show();
+      });
+      $("#close").click(function () {
+        $("#popup").hide();
+      });
+      $("#popupopen2").click(function () {
+        $("#popup2").show();
+      });
+      $("#close2").click(function () {
+        $("#popup2").hide();
+      });
+      $("#infobtn").click(function () {
+        $("#myPopup").toggleClass("show");
+      });
+      $(".seeexample").click(function () {
+        $(".example").toggle();
+        $(".popup").css("min-width", "580px");
+      })
+      $("#close3").click(function () {
+        $(".example").toggle();
+        $(".popup").css("min-width", "fit-content");
+
+      })
+    });
+  </script>
+</body>
+
+</html>
